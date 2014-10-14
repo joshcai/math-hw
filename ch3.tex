@@ -1,0 +1,189 @@
+\begin{enumerate}
+
+\item[\textbf{3.2}]
+\textit{(i)} Im($z$+i) $<$ 2 \\
+Open, closure: Im $(z+\mathrm{i}\le2$
+
+\textit{(ii)} $|z-\mathrm{i}| < |z-1|$ \\
+Open, closure: $|z-\mathrm{i}| \le |z-1|$ 
+
+\textit{(iii)} $|z+2\mathrm{i}| \ge 2$ \\
+Closed
+
+\textit{(iv)} $|z-1+\mathrm{i}| \ge |z-1-\mathrm{i}|$ \\
+Closed
+
+\textit{(v)} Im[$(z+\mathrm{i}/(2\mathrm{i})] < 0$ \\
+Open, closure: Im[$(z+\mathrm{i}/(2\mathrm{i})] \le 0$
+
+\textit{(vi)} $1 < $ Re $z \le2$ \\
+Neither, closure: $1 \le $ Re $z \le2$ 
+
+\textit{(vii)} Re $z\ne0$ \\
+Open, closure: $\mathbb{C}$
+
+\textit{(viii)} $|z-1| < 1 \text{ and } |z| = |z-2|$ \\
+Neither, closure: $|z-1| \le 1 \text{ and } |z| = |z-2|$
+\\\\
+\item[\textbf{3.4}]
+\textit{(i)} \\
+Suppose $S$ is open and is not $\varnothing$. Then for any $z \in S$, there exists $r>0$ such that D$(z;r)\subseteq S$. But, D$(z;r)$ is not finite, so $S$ is not finite, which is a contradiction. Therefore, $S$ is not open if it is finite and non-empty. 
+\\\\
+\textit{(ii)} \\
+First, we show that $S$ has no limit points. Suppose $S$ has a limit point $l$. Since $S$ is finite, let $k$ denote the closest point to $l$ (or one of the closest if there are multiple equidistant). Take $r = |k-l|/2$. Then D$'(l;r) \cap S = \varnothing$, which means that $l$ is not a limit point. Therefore, $S$ has no limit points. Since $S$ contains all of its limit points (since there are none), $S$ is closed.
+\\\\
+\item[\textbf{3.5}]
+\textit{(a)} \\
+We first show that $G_1 \cup G_2$ is a region $\implies G_1 \cap G_2 \ne \varnothing$:
+
+Since $G_1 \cup G_2$ is a region, then $G_1 \cup G_2$ is polygonally connected. We can take $a \in G_1$ and $b \in G_2$. There must be a path between $a$ and $b$, which means there is at least one element common to both $G_1$ and $G_2$. Thus, $G_1 \cap G_2 \ne \varnothing$
+
+Now we show that  $G_1 \cap G_2 \ne \varnothing \implies G_1 \cup G_2$ is a region:
+
+We see easily that $G_1 \cup G_2$ is open, since $G_1$ and $G_2$ are open. We also see that it is non-empty, since $G_1$ is non-empty (by definition of being a region). We also see that $G_1 \cup G_2$ is polygonally connected, since to get from any $a \in G_1$ to any $b \in G_2$, we can just go through any $c \in G_1 \cap G_2$, since it is non-empty. (Since $c$ is in $G_1 \cap G_2$, it is in $G_1$, so there is a polygonal route from $a$ to $c$, since it is given that $G_1$ is a region. Similarly there is a route from $c$ to $b$.) Since $G_1 \cup G_2$ is a non-empty, open set that is polygonally connected, it is a region. 
+
+\textit{(b)} \\
+$G_1 \cup G_2$ is a region given that $G_1 \cap G_2 \ne \varnothing$ and the previous result in \textit{(a)}. Then, $(G_1 \cup G_2) \cap G_3 \ne \varnothing$, since $G_2 \cap G_3 \ne \varnothing$, which means $G_1 \cup G_2 \cup G_3$ is a region, and so on until you get to $N$. 
+\\\\
+\item[\textbf{3.9}]
+\textit{(a)} \\
+(i) $\dfrac{1}{n}\mathrm{i}^n$ \\
+$|z_n|=\dfrac{1}{n}|\mathrm{i}|^n$ \\
+Since $1/n\rightarrow0, z_n\rightarrow0$ \\
+\\
+(ii) $(1+\mathrm{i})^{-n}$ \\
+$|z_n|=|1+\mathrm{i}|^{-n}\rightarrow0$\\
+So $z_n\rightarrow0$
+\\\\
+(iii) $\dfrac{n^2+\mathrm{i}n}{n^2+\mathrm{i}}$ \\
+$\{\text{Re }z_n\} = \dfrac{n^4+n}{n^4+1}\rightarrow 1$\\
+$\{\text{Im }z_n\} = \dfrac{n^3-n^2}{n^4+1}\rightarrow 0$\\
+So $z_n\rightarrow1$
+\\\\
+\textit{(b)} \\
+(i) $\mathrm{i}^n$ \\
+$z_n = \mathrm{i}, -1, -\mathrm{i}, 1, \mathrm{i}, ...$ \\
+Cycles, so has no limit \\
+\\\\
+(ii) $(1+\mathrm{i})^{n}$ \\
+$|z_n|=|1+\mathrm{i}|^{n}\rightarrow\infty$\\
+Size gets bigger and bigger, so has no limit\\
+\\\\
+(iii) $(-1)^n\dfrac{n}{n+\mathrm{i}}$ \\
+$\{\text{Re }z_n\} = (-1)^n\dfrac{n^2}{n+1}\rightarrow\infty$\\
+Real part does not converge, so whole sequence cannot converge
+\\\\
+\item[\textbf{3.11}]
+\textit{(a)} \\
+(i) $z+|z|^3$ \\
+Let $z = u+v\mathrm{i}$. \\
+$f(z) = u+iv + |u+iv|^3$ \\
+Re $f(z) = u+|u+iv|^3 \rightarrow0$ \\
+Im $f(z) = v \rightarrow0$ \\
+Since both the real and imaginary parts converge to 0, $f(z)$ converges to 0.
+\\\\
+(ii) $\dfrac{|z|^2}{z}$ \\
+Let $z = u+v\mathrm{i}$. \\
+$f(z) = \dfrac{u^2+v^2}{u+v\mathrm{i}} = u-v$i \\
+Re $f(z) = u \rightarrow0$ \\
+Im $f(z) = -v \rightarrow0$ \\
+Since both the real and imaginary parts converge to 0, $f(z)$ converges to 0.
+\\\\
+(iii) $\dfrac{(\text{Re }z)(\text{Im }z)}{|z|}$ \\\\\\\\\\\\
+\textit{(b)} \\
+(i) $\dfrac{\overline{z}}{z}$ \\
+$z_n = \mathrm{i}, -1, -\mathrm{i}, 1, \mathrm{i}, ...$ \\
+$f(z) = -1$ when on imaginary axis.
+$f(z) = 1$ when on real axis.
+\\\\
+(ii) $\dfrac{\overline{z}}{|z|}$ \\
+$f(z) = -$i when on imaginary axis but above real axis.
+$f(z) = \:$i when on imaginary axis but below real axis.
+\\\\
+(iii) $\dfrac{\text{Im }z}{\text{Re }z}$ \\
+$f(z) = 0$ when $z$ is real and $f(z) = 1$ on line $y=x$.
+\\\\
+\item[\textbf{3.13}]
+\textit{(i)} \\
+Let $z = a+b\mathrm{i}$. Then $f(z) = 
+\dfrac{a+b\mathrm{i}}{1+\sqrt{a^2+b^2}}$.\\
+Re $f(z) = \dfrac{a}{1+\sqrt{a^2+b^2}}$, which is continuous.\\
+Im $f(z) = \dfrac{b}{1+\sqrt{a^2+b^2}}$, which is also continuous. \\
+Since both the real and imaginary parts of $f$ are continuous, $f$ is also continuous.
+
+\textit{(ii)} \\
+Let $z = r\mathrm{e}^{\mathrm{i}\theta}$. Then $f(z) = \dfrac{z}{1+|z|} = \dfrac{r\mathrm{e}^{\mathrm{i}\theta}}{1+r}$
+
+Suppose $f(z_1) = f(z_2)$. Then,
+\begin{align*}
+\dfrac{r_1\mathrm{e}^{\mathrm{i}\theta_1}}{1+r_1} &= 
+\dfrac{r_2\mathrm{e}^{\mathrm{i}\theta_2}}{1+r_2} \\
+\dfrac{\mathrm{e}^{\mathrm{i}\theta_1}}{\mathrm{e}^{\mathrm{i}\theta_2}} &=
+\dfrac{r_2+r_1r_2}{r_1+r_1r_2} \\
+\mathrm{e}^{\mathrm{i}(\theta_1 - \theta_2)} &=
+\dfrac{r_2+r_1r_2}{r_1+r_1r_2} 
+\end{align*}
+We see that the right hand side has no complex part, since $r_1$ and $r_2$ are real numbers. So we know that
+\[\sin(\theta_1 - \theta_2) = 0\]
+which means that
+\[\theta_1 - \theta_2 = 0 \text{ or } \theta_1 - \theta_2 = \pi\]
+If $\theta_1 - \theta_2 = \pi$, then we get 
+\[\mathrm{e}^{\mathrm{i}\pi} = -1 = \dfrac{r_2+r_1r_2}{r_1+r_1r_2} \]
+but this is impossible, because $r_1$ and $r_2$ are non-negative.
+
+So $\theta_1 - \theta_2 = 0$, which means $\theta_1 = \theta_2$ and
+\begin{align*}
+\mathrm{e}^{0} = 1 &= \dfrac{r_2+r_1r_2}{r_1+r_1r_2} \\
+r_2+r_1r_2 &= r_1+r_1r_2 \\
+r_2 &= r_1
+\end{align*}
+Since $\theta_1 - \theta_2 = 0$ and $r_2 = r_1$, we know $z_1$ = $z_2$.\\
+\textit{(iii)} \\
+We want to show that for all $y \in \mathrm{D}(0,1)$ there exists $x$ such that $f(x) = y.$
+
+Let $y = r\mathrm{e}^{\mathrm{i}\theta}$, $r < 1$.
+Then $r\mathrm{e}^{\mathrm{i}\theta} = 
+\dfrac{r'\mathrm{e}^{\mathrm{i}\theta'}}{1+r'}$.
+We set $r = \dfrac{r'}{1+r'}$ and solve for $r'$.
+\begin{align*}
+  r = \dfrac{r'}{1+r'} \\
+  r+rr' = r' \\
+  r = r'- rr' \\
+  r = r'(1-r) \\
+  \dfrac{r}{1-r} = r'
+\end{align*}
+So for every $y$ represented as $r\mathrm{e}^{\mathrm{i}\theta}$ is simply the image of $\dfrac{r}{1-r}\mathrm{e}^{\mathrm{i}\theta}$.
+\\\\
+\item[\textbf{3.16}]
+\textit{(i)} \\
+We want to prove that $\{z_n(c)\}$ tends to infinty by showing that the sequence is strictly increasing.
+\begin{align*}
+|z_{k+1}| &= |z_{k}^2+c| \\
+&\ge ||z_k|^2 - |c|| \\
+&= |z_k|^2 - |c| \text{ since } |c| \le 2
+\end{align*}
+We now want to show that $|z_k|^2 - |c|$ is strictly greater than $|z_k|$.
+
+We can easily see that $|z_k|(|z_k-1|) > |c|$ is true, since the left hand side must be greater than 2, and the right hand side is less than or equal to 2. 
+
+From that we can find:
+\begin{align*}
+|z_k|(|z_k-1|) > |c| \\
+|z_k|^2 - |z_k| > |c| \\
+|z_k|^2 - |c| > |z_k|
+\end{align*}
+We can repeat this process and see that each term gets larger, so the sequence approaches infinity. (Actually, this doesn't sound quite right...)
+
+\textit{(ii)} \\\\\\\\\\\\\\\\\\\\\\\\
+
+\textit{(iii)} \\
+To prove that $M$ is closed, we prove that $\mathbb{C} - M$ is open. 
+
+$\mathbb{C} - M$ is the set of $c \in \mathbb{C}$ such that $|c| > 2$ or the sequence $\{z_n(c)\}$ tends to infinity.
+
+The set of $c \in \mathbb{C}$ such that the sequence $\{z_n(c)\}$ tends to infinity is the union $\cup_{k=1}^{\infty} U_k$. Since each of these is open from part \textit{(ii)}, the whole union is open. 
+
+The set of $c \in \mathbb{C}$ such that $|c| > 2$ is simply the set of points outside the circle centered at the origin with radius 2. However, this set is already contained within the previous set, since it is equivalent to $U_1$. 
+
+Since the set of $c \in \mathbb{C}$ such that the sequence $\{z_n(c)\}$ tends to infinity is open, $\mathbb{C} - M$ is open, and $M$ is closed. 
+\end{enumerate}
