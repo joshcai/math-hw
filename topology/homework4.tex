@@ -1,0 +1,48 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+
+\begin{document}
+
+\title{Homework 4}
+\author{Josh Cai}
+
+\maketitle
+
+
+\begin{enumerate}
+\item
+(a) $\mathcal{T} = \{\emptyset, X\}$
+\\i) By definition, $\mathcal{T}$ contains $\emptyset$.
+\\ii) By definition, $\mathcal{T}$ contains $X$.
+\\iii) $\bigcup\{\emptyset,X\} = X \in \mathcal{T}$ (All other arbitrary unions are of one element sets, which trivially belong in $\mathcal{T}$)
+\\iv) $\bigcap\{\emptyset,X\} = \emptyset \in \mathcal{T}$ (All other finite intersections are of one element sets, which trivially belong in $\mathcal{T}$)
+\\\\(b) $\mathcal{T}:= \mathcal{P}(x)$
+\\i) Since $\emptyset\in\mathcal{P}(x)$, $\emptyset \in \mathcal{T}$.
+\\ii) Since $X\in\mathcal{P}(x)$, $X \in \mathcal{T}$.
+\\iii) Arbitrary union is satisfied, since the union of any subsets of $\mathcal{P}(x)$ contain only elements in $X$, it exists in $\mathcal{P}(x)$ and thus $\mathcal{T}$. 
+\\iv) Finite intersections is satisfied, since the finite intersection of any subsets of $\mathcal{P}(x)$ contain only elements in $X$ and must exist in $\mathcal{P}(x)$ and thus $\mathcal{T}$. 
+\\\\(c) $\mathcal{T} = \{Y\subset X|X-Y$ is finite or $Y = \emptyset\}$
+\\i) By definition, $\mathcal{T}$ contains $\emptyset$.
+\\ii) $X-X = \emptyset$ which is finite, so $X \in \mathcal{T}$.
+\\iii) Let $Z_i \subset \mathcal{T}$. $X-\bigcup Z_i = \bigcap (X-Z_i)$. The maximum size of $X-\bigcup Z_i$ is constrained by the smallest set in the sets $X-Z_i$. Since $X-Z_i$ for a given $i$ is finite, $X-\bigcup Z_i$ must be finite as well and is therefore in $\mathcal{T}$.
+\\iv) Let $Z_i \subset \mathcal{T}$ ($Z_i$ is finite). $X-\bigcap Z_i = \bigcup (X-Z_i)$. Since the right side is a finite sum of numbers, the left side must be finite, so $X-\bigcap Z_i \in \mathcal{T}$.
+
+\item
+Since each $x \in A$ is in open neighborhood $U$ of $x \subset A$, the union of all open neighborhoods of $x \in A$, $V$, is open and a subset of $A$. However, $A$ is also a subset of $V$, since each $x \in A$ exists in one of the neighborhoods in $V$. Since $A \subset V$ and $A \supset V$, $A = V$. Since $V$ is open, $A$ must be open as well.
+
+\item
+The defintion of a neighborhood $N \subset X$ of $x\in X$ for an arbitrary topology is a set $N$ containing an open set $U$ which contains $x$. A neighborhood in $\mathbb{R}^n U_x$ of $x \in \mathbb{R}^n$ is a set containing $B_x(r)$ for some $r > 0$. The open set is $B_x(r) := \{y \in \mathbb{R}^n| |x-y|<r \}$ 
+(open because it doesn't contain any of its boundary points), and this contains $x$ as its center, so the neighborhood in $\mathbb{R}^n$ satisfies the definition of a neighborhood for an arbitrary topology.
+
+\item
+(a) i) Let $\mathcal{B}$ be the basis set. Let an arbitrary $x \in \mathbb{R}^n$. Then, $x \in B_x(1) \in \bigcup \mathcal{B}$. Since $x$ was arbitrary, $\mathbb{R}^n \subset \bigcup \mathcal{B}$. Now let arbitrary $x \in \bigcup \mathcal{B}$. Then $x\in B_y(r)$ for some $r > 0 $ and $y \in \mathbb{R}^n$. Since $B_y(r) \subset\mathbb{R}^n$, $x \in \mathbb{R}^n$. Since $x$ was arbitrary, $\mathbb{R}^n \supset \bigcup \mathcal{B}$. Therefore, $\mathbb{R}^n = \bigcup \mathcal{B}$.
+\\ii) Let $U \in \mathcal{T}$, $x\in U$, where $U$ is an open set. Since $U$ is open, $U$ is a neighborhood of $x \in U$, which means there exists a ball $B_x(r) \subset U$ where $r = 1/n, n \in \mathbb{N}$. (The ball $B_x(r)$ contains $x$ at its center.)
+\\Since these two conditions are satisfied, $\mathcal{B}$ is a basis for the standard topology on $\mathbb{R}^n$.
+\\\\(b) i) Let $\mathcal{B}$ be the basis set. Let an arbitrary $x \in \mathbb{R}^n$. Then, $x \in B^d_{(0,0)}(2x) \in \bigcup \mathcal{B}$. Since $x$ was arbitrary, $\mathbb{R}^n \subset \bigcup \mathcal{B}$. Now let arbitrary $x \in \bigcup \mathcal{B}$. Then $x\in B^d_{(x_1,x_2)}(r)$ for some $r > 0 $ and $x_1,x_2 \in \mathbb{R}^n$. Since $B^d_{(x_1,x_2)}(r) \subset\mathbb{R}^n$, $x \in \mathbb{R}^n$. Since $x$ was arbitrary, $\mathbb{R}^n \supset \bigcup \mathcal{B}$. Therefore, $\mathbb{R}^n = \bigcup \mathcal{B}$.
+\\ii) Let $U \in \mathcal{T}$, $x\in U$, where $U$ is an open set. Since $U$ is open, $U$ is a neighborhood of $x \in U$, which means there exists some $B^d_{(x_1,x_2)}(r) \subset U$ where $r > 0$ and $x_1,x_2 \in \mathbb{R}$ that contains $x$. 
+\\Since these two conditions are satisfied, $\mathcal{B}$ is a basis for the standard topology on $\mathbb{R}^n$.
+
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,67 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage[all]{xy}
+\usetikzlibrary{positioning,chains,fit,shapes,calc}
+
+\begin{document}
+
+\title{Homework 3}
+\author{Josh Cai}
+
+\maketitle
+\section*{Section 9.5}
+
+
+
+\textbf{30a)} The equivalence class of 010 is $[010]$, or all binary strings of 3 or more bits that start with 010.
+
+\noindent\textbf{30d)}  The equivalence class of 01010101 is [010], or all binary strings of 3 or more bits that start with 010.
+\\\\
+\noindent\textbf{34b)} The equivalence class of 1011 is [1011], which consists of only the element 1011.
+
+\noindent\textbf{34c)}  The equivalence class of 11111 is [11111], or all binary strings of 5 or more bits that start with 11111.
+\\\\
+\noindent\textbf{36a)} The congruence class $[4]_2$ is all the even numbers.
+
+\noindent\textbf{36b)}  The congruence class $[4]_3$ is all numbers with remainder 1 after dividing by 3.
+
+\noindent\textbf{36c)} The congruence class $[4]_6$ is all numbers with remainder 4 after dividing by 6.
+
+\noindent\textbf{36d)}  The congruence class $[4]_8$ is all numbers with remainder 4 after dividing by 8.
+\\\\
+\noindent\textbf{42a)} Is a partition because has each of the elements of ${-3,-2,-1,0,1,2,3}$ in the subsets and each element only occurs once within all subsets.
+
+\noindent\textbf{42d)}  Is not a partition because $0$ is not in the subsets.
+\\\\
+\noindent\textbf{44a)} Is a partition because every integer is either odd or even, so and no integer can be both odd and even.
+
+\noindent\textbf{44b)}  Is not a partition because zero is not in either of the subsets of the partition.
+
+\noindent\textbf{44e)}  Is not a partition because 2 is not divisible by 3 and is also even, and no element can exist in more than one subset of the partition.
+\\\\
+
+\noindent\textbf{46c)} Is not a partition because boundary points are contained within two subsets. 
+
+\noindent\textbf{46d)}  Is not a partition because the boundary points are not in any subsets.
+
+\noindent\textbf{46e)}  Is a partition because every number exists in one and only one subset. The collection of subsets is the set of real numbers because $k$ is all integers.
+\\\\
+\noindent\textbf{48b)} \{(a,a),(b,b),(c,c),(c,d),(d,d),(d,c),(e,e),(e,f),(f,e),(f,f),(g,g)\}
+
+\noindent\textbf{48d)}  \{(a,a),(a,c),(a,e),(a,g),(c,a),(c,c),(c,e),(c,g),(e,a),(e,c),(e,e),(e,g),(g,a), \\(g,c),(g,e),(g,g),(b,b),(b,d),(d,b),(d,d),(f,f)\}
+\\\\
+\noindent\textbf{56a)} If $R_1$ and $R_2$ are equivalence relations on $S$, then $R_1$ and $R_2$ are both reflexive, and therefore the union of the relations would be reflexive. $R_1$ and $R_2$ are both symmetric, if $(a,b)$ was in $R_1 \cup R_2$, then $(a,b)$ was in either $R_1, R_2$, or both. If it was in either $R_1$ or $R_2$, $(b,a)$ must exist in $R_1 \cup R_2$ since $(b,a)$ also existed in the relation that $R_1$ existed in. $R_1 \cup R_2$ is not necessarily transitive: if $(a,b)$ exists in $R_1$ and $(b,c)$ exists in $R_2$, $(a,c)$ need not necessarily exist. 
+
+\noindent\textbf{56c)}  It is not reflexive because since $R_1$ and $R_2$ were both reflexive, none of those elements can exist in $R_1 \oplus R_2$. It is symmetric because if $(a,b)$ existed in both sets, $(b,a)$ would exist in both sets, and neither would be in $R_1 \oplus R_2$. If $(a,b)$ and $(b,a)$ existed in one set, then both would exist in $R_1 \oplus R_2$. It is not necessarily transitive because both sets could have $(a,c)$ while one set has $(a,b)$ and another $(b,c)$. 
+\\\\
+\noindent\textbf{60a)} $R$ is reflexive because $f(x)$ is trivially the same order as $f(x)$ (using the constant 1 for $C$ will show this). $R$ is symmetric because if $f = \Theta(g)$ then there exists constants $C_1, C_2$ such that $|f(x)|\le C_1|g(x)|$ and $|f(x)|\ge C_1|g(x)|$. The constants $C_1^{-1}, C_2^{-1}$ will satisfy the same conditions for $g$, so $g = \Theta(f)$. $R$ is transitive because if $f$ has the same order as $g$, and $g$ has the same order as $h$, then $f$ has the same order as $h$. 
+
+\noindent\textbf{60b)} The equivalence class of $f(n) = n^2$ is all functions of degree 2. 
+\\\\
+\noindent\textbf{Bonus a)} There are $2^5 = 32$ different equivalence relations. Since each has 2 equivalence classes, we observe that the second equivalence class is simply the complement of the first equivalence class. Therefore, we can count the number of subsets of the set. The number of subsets of a set is $2^{\# of elements}$ because each element has the choice of being in the subset or not, and each choice is independent. However, we have overcounted with $2^6$, and we see that each subset is counted twice, once as a subset and the second as the complement of another subset. So we divide by 2, and get $2^5 = 32$ equivalence relations.
+
+\noindent\textbf{Bonus b)}  There are $\binom{6}{2} = 15$ different equivalence relations. Since we have 5 equivalence classes, we know by Pigeonhole Principle one subset must have at least 2 elements. There cannot be a set with more than 2 elements, or there would be less than 5 equivalence classes. We see that the subset with 2 elements uniquely determines the equivalence relation, so we count all the different subsets of 2 elements in a set of 6 elements, which is just $\binom{6}{2} = 6 \times 5 / 2 = 15$.
+
+\end{document}

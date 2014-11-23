@@ -1,0 +1,57 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage[all]{xy}
+\usetikzlibrary{positioning,chains,fit,shapes,calc}
+
+\begin{document}
+
+\title{Homework 10}
+\author{Josh Cai}
+
+\maketitle
+\section*{Section 5.3}
+
+\textbf{44)} Basis step: For the full binary tree of just the root $r$, this is true since $i(T)=0$ and $l(T)=1$. 
+\\Recursive step: For the inductive hypothesis, we assume that for two trees $T_1, T_2$ that the number of leaves of each is 1 larger than the number of internal vertices. Let $T$ be the full binary tree consisting of $T_1$ and $T_2$. The number of internal vertices is $i(T) = 1+i(T_1)+i(T_2)$. From the inductive hypothesis, the number of leaves is $l(T) = l(T_1) + l(T_2) = 2+i(T_1)+i(T_2)$. Since $l(T)$ is one more than $i(T)$, we have proved the recursive step.
+\\\\\noindent\textbf{48a)} $A(1,0) = 0$
+
+\noindent\textbf{48b)} $A(0,1) = 2$
+
+\noindent\textbf{48c)} $A(1,1) = 2$
+
+\noindent\textbf{48d)} $A(2,2) = A(1,A(2,1)) = A(1,2) = A(0,A(1,1)) = A(0,2) = 4$
+
+\section*{Ch 5 Supplementary}
+
+\noindent\textbf{59)} (()()) is in $B$ if ()() is in $B$. ()() is in $B$ if () is in $B$. () is in $B$ because $\lambda$ is in $B$, so (()()) is in $B$. (())) is in $B$ if ()) is in $B$. ()) is in $B$ if ) is in $B$, however ) isn't in $B$, so (())) isn't in $B$.
+\\\\\noindent\textbf{60)} All the elements in $B$ with length 6 are ((())),()(()),()()(),(())(),(()()).
+\\\\\noindent\textbf{62)} Basis step: For $\lambda$, the number of right parentheses is 0 which is equal to the number of left parentheses.
+\\Recursive step: For the inductive hypothesis, we assume that for two elements in $B$, called $C$ and $D$, satisfy that the number of right parentheses is equal to the number of left parentheses. $(C)$ adds one to the left and one to the right, so the number remains equal, and the case is the same for $D$. $l(CD) = l(C)+l(D) = r(C)+r(D) = r(CD)$ so the number of left and right parentheses remain equal again, and the recursive step is done.
+
+\section*{Section 11.2}
+\noindent\textbf{2)} Attached below.
+\\\\\noindent\textbf{4a)} 3 comparisons (oenology, phrenology, ornithology)
+
+\noindent\textbf{4b)} 3 comparisons (oenology, campanaology, ichthyology)
+
+\noindent\textbf{4c)} 3 comparisons (oenology, phrenology, ornithology)
+
+\noindent\textbf{4d)} 3 comparisons (oenology, campanaology, ichthyology)
+\\\\\noindent\textbf{6)} You could find it in one weighing if lucky, and at most two weighings are needed. Weigh 1 and 3 first, if one of them is lighter, that is the counterfeit coin. If they are balanced, weigh 2 and 4 and whichever is lighter is the counterfeit coin.
+
+\section*{Ch 11 Supplementary}
+\noindent\textbf{13)} Attached below.
+\\\\\noindent\textbf{14)} $B_k$ has $2^k$ vertices. Basis step: $B_0$ has 1 vertex which is equal to $2^0$. 
+\\Recursive step: For the inductive hypothesis, assume that $B_k$ has $2^k$ vertices. By the definition of binomial trees, $B_{k+1}$ has two times the number of vertices $B_k$ has. Thus, $B_{k+1}$ has $2\times 2^k = 2^1\times 2^k = 2^{1+k} = 2^{k+1}$ vertices. Thus, the recursive step is done.
+\\\\\noindent\textbf{16)} There are ${{k}\choose{j}}$ vertices in $B_k$ at depth $j$. Basis step: $B_0$ at depth 0 has ${{0}\choose{0}} = 1$ vertex. 
+\\Recursive step: For the inductive hypothesis, assume that for $B_k$, there are ${{k}\choose{j}}$ vertices at depth $j$. Then the number of vertices at depth $j$ in $B_{k+1}$ is equal to ${{k}\choose{j}}+{{k}\choose{j-1}}$ since the second $B_k$ graph is shifted down by 1. Then 
+\[\dbinom{k}{j}+\dbinom{k}{j-1} = \dfrac{k!}{j!(k-j)!}+\dfrac{k!}{(j-1)!(k-j+1)!}\]
+\[ = \dfrac{k!(k-j+1)}{j!(k-j+1)!}+\dfrac{k!(j)}{(j)!(k-j+1)!}\]
+\[ = \dfrac{k!(k-j+1+j)}{j!(k-j+1)!}\]
+\[=\dfrac{(k+1)!}{j!(k+1-j)!}\]
+\[= \dbinom{k+1}{j}\]
+Thus, the recursive step is done, and we have proven that there are ${{k}\choose{j}}$ vertices in $B_k$ at depth $j$.
+
+\end{document}

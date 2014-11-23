@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+
+\begin{document}
+
+\title{Homework 6}
+\author{Josh Cai}
+
+\maketitle
+
+
+\begin{enumerate}
+\item
+We see that the set of metric open balls $B_x^d(\epsilon)$ for $0<\epsilon<1$ forms a basis for the topology on $X$. By definition, the set of metric open balls $B_x^{\bar d}(\epsilon)$ for $0<\epsilon<1$ also forms a basis for the topology on $X$. Since these are the same collection of metric open balls, we see that the topology induced by both metrics is the same.
+
+\item
+(1) is finer than (3) and (5)
+\\(2) is finer than (1), (3), and (5)
+\\(4) is finer than (2),(1),(3),(5)
+\\\\We show that (4) is finer than (2), (2) is finer than (1), (1) is finer than (5), and (1) is finer than (3):
+\\\\Given a basis element $(a,b)-K$ of $\mathcal{T}_2$ and a point $x$ of $(a,b)-K$, we take the basis element $(c,x]$, where $c<x$ is an irrational number greater than the largest rational number smaller than $x$. $(c,x]$ contains $x$ and lies within $(a,b)-K$. However, no basis element in $\mathcal{T}_2$ lies within $(c,x]$ and contains $x$. This shows $\mathcal{T}_4$ is strictly finer than $\mathcal{T}_2$.
+\\\\Given a basis element $(a,b)$ of $\mathcal{T}_1$ and a point $x$ of $(a,b)$, we take the basis element $(a,b)$ of $\mathcal{T}_2$ since it contains $x$ and lies within $(a,b)$. This shows $\mathcal{T}_2$ is finer than $\mathcal{T}_1$.
+\\\\Given a basis element $(-\infty,a)$ of $\mathcal{T}_5$ and a point $x$ of $(-\infty,a)$, we take the basis element $(-\infty,a)$ of $\mathcal{T}_1$ since it contains $x$ and lies within $(-\infty,a)$. However, no basis element in $\mathcal{T}_5$ can lie within $(0,\infty) \in \mathcal{T}_1$, so $\mathcal{T}_1$ is strictly finer than $\mathcal{T}_5$.
+\\\\Given a basis element that is infinite of $\mathcal{T}_3$ and a point $x$ in it, we take the same basis element in $\mathcal{T}_1$, since it lies in the first basis element and contains $x$. However, no basis element in $\mathcal{T}_3$ lies within $(a,b)$, since any interval within would have a complement that is infinite. This shows $\mathcal{T}_1$ is strictly finer than $\mathcal{T}_3$.
+
+\item
+a) $\emptyset \in \bigcap \{\mathcal{T}_{\alpha}\}_{\alpha \in I}$ because $\emptyset$ is in $\mathcal{T}_{\alpha}$ for all $\alpha \in I$ since each $\mathcal{T}_{\alpha}$ is a topology.
+\\b) $X \in \bigcap \{\mathcal{T}_{\alpha}\}_{\alpha \in I}$ because $X$ is in $\mathcal{T}_{\alpha}$ for all $\alpha \in I$ since each $\mathcal{T}_{\alpha}$ is a topology.
+\\c) Let $Y$ be a subcollection in $\bigcap \{\mathcal{T}_{\alpha}\}_{\alpha \in I}$. Then $\bigcup Y \in \bigcap \{\mathcal{T}_{\alpha}\}_{\alpha \in I}$ because if $Y$ is an element of $\mathcal{T}_{\alpha}$ for all ${\alpha \in I}$, then $\bigcup Y \in \mathcal{T}_{\alpha}$ for all ${\alpha \in I}$ since each $\mathcal{T}_{\alpha}$ is a topology. Thus, $\bigcup Y \in \bigcap \{\mathcal{T}_{\alpha}\}_{\alpha \in I}$.
+\\d) Let $Y$ be a finite subcollection in $\bigcap \{\mathcal{T}_{\alpha}\}_{\alpha \in I}$. Then $\bigcap Y \in \bigcap \{\mathcal{T}_{\alpha}\}_{\alpha \in I}$ because if $Y$ is an element of $\mathcal{T}_{\alpha}$ for all ${\alpha \in I}$, then $\bigcap Y \in \mathcal{T}_{\alpha}$ for all ${\alpha \in I}$ since each $\mathcal{T}_{\alpha}$ is a topology. Thus, $\bigcap Y \in \bigcap \{\mathcal{T}_{\alpha}\}_{\alpha \in I}$.
+\\\\Since the intersection of a family of topologies satisfies all the properties of a topology, it is a topology.
+
+\item
+Given a basis element $(a,b]$ of $\mathcal{C}$ and a point $x$ of $(a,b]$, then the basis element of the upper limit topology $(a,x]$ lies in $(a,b]$ and contains $x$. However, given the basis element $(a,x]$ in the upper limit topology, where $x$ is irrational, there is no basis in $\mathcal{C}$ that lies in $(a,x]$ and contains $x$. Therefore, $\mathcal{C}$ is strictly coarser than the upper limit topology.
+
+
+\end{enumerate}
+
+\end{document}

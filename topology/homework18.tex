@@ -1,0 +1,23 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+
+\begin{document}
+
+\title{Homework 18}
+\author{Josh Cai}
+
+\maketitle
+\begin{enumerate}
+\item
+Suppose $X$ is connected under $T'$. Then there does not exist a separation of $X$. Since $T$ is coarser, there cannot exist a separation of $X$ in $T$, and so $X$ would be connected uner $T$ as well. However, suppose $X$ is connected under $T$. Then $X$ may or may not be connected under $T'$, since there are more open subsets that can be used to form a separation. For example, suppose $X$ is a finite set with more than one element. Then if $T$ is the indiscrete topology and $T'$ is the cofinite topology, then $T \subset T'$ and $X$ is connected under both. Suppose $T$ is the indiscrete topology and $T'$ is the discrete topology. Then $T\subset T'$, but $X$ is connected under $T$ but not $T'$.
+
+\item
+(a) Suppose $\bigcup A_n$ is not connected. Then it contains a separation $C,D$. Since each $A_n$ is connected, each of them must exist in each $C$ or $D$. Without loss of generality, let $A_1 \subset C$. Since $A_1 \cap A_2 \neq \emptyset$, $A_2$ must be contained in either $C$ or $D$, and $A_1$ is contained in $C$, $A_2$ is in $C$. Then, $A_n, n>2$ must be contained in $C$ for the same reason. Thus $D = \emptyset$. Then $C, D$ is not a separation, which is a contradiction, and $\bigcup A_n$ is connected.
+\\(b) $\bigcap A_n$ is not necessarily connected. Suppose $X = \mathbb{R}^2$. Then $A_1 = \{(x,y)|x^2+y^2=1\}$ and for $n>1$, $A_n = \{(x,y)|x^2+(y-1)^2=1\}$ are all connected sets, but the intersecction is two points in $\mathbb{R}^2$, which is not connected.
+\\(c) $\bigcap A_n$ is connected if $A_n \supset A_{n+1}$ for all $n$. $A_1 \cap A_2 = A_2$ which is connected. Continuing this process on for infinity, we always get a connected subspace, and thus $\bigcap A_n$ must be connected if $A_n \supset A_{n+1}$ for all $n$.
+\\(d) $\bigcap A_n$ is connected if $A_n \subset A_{n+1}$ for all $n$ because $\bigcap A_n = A_1$, and $A_1$ is connected by supposition.
+
+
+\end{enumerate}
+\end{document}

@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{geometry}
+\usepackage[font=small,labelfont=bf]{caption}
+\pdfpagewidth 8.5in
+\pdfpageheight 11in
+\setlength\topmargin{0in}
+\setlength\headheight{0in}
+\setlength\headsep{0in}
+\setlength\textheight{9in}
+\setlength\textwidth{6.5in}
+\setlength\oddsidemargin{0in}
+\setlength\evensidemargin{0in}
+\setlength\headheight{0pt}
+\setlength\headsep{0in}
+\setlength\parskip{11pt}
+\setlength\parindent{1in}
+
+\title{RSA Encryption}
+\author{Josh Cai}
+\date{November 28, 2011}
+
+\begin{document}
+\maketitle
+\section{Introduction}
+Encryption has been studied thoroughly by militaries and governments for secure communication. Encyption, the process of altering data to render it undeciperable by other individuals, allows only users with a special "key" to read the encrypted texts by performing a reverse algorithm for decryption. There are two main types of encryption: private key encryption and public key encryption. In private key encryption, the sender and receiver both own seperate algorithms for encrypting and decrypting. The key, however, must be exchanged in person as people who obtain access to the key by other means can decode all messages from the sender. Public key encryption removes the need for this, as the sender contains a private key used to decode messages encrypted from the receiver using a public key. Public key encryption has become increasingly popular as it is viewed as the more secure option.
+
+\section{RSA Encryption}
+RSA encryption is a form of public key encryption created by Ron Rivest, Adi Shamir, and Leonard Adleman that works due to the inability of computers to factor very large integers. It was first developed by Clifford Cocks, who was an English mathematician working for the United Kingdom and kept the encryption technique private. It was later independently discovered by Rivest, Shamir, and Adleman and publicly released it in 1978. The actual process of the RSA algorithm follows three steps: key generation, encryption, and decryption. 
+\subsection{Key Generation}
+The receiver begins by choosing two prime numbers, $p$ and $q$. For the RSA algorithm to be secure, $p$ and $q$ must be large enough such that $n = pq$ is hard for a computer to factor. After computing $n$, the person computes $\varphi(n)$. $\varphi(n)$ is Euler's totient function, defined to be the number of relatively prime integers less than or equal to $n$. Since $n$ is the product of two primes, we can see that $\varphi(n)$ is $(p-1)(q-1)$. Following this, the receiver chooses an integer $e$ such that $1<e<\varphi(n)$ and $e$ is relatively prime to $\varphi(n)$. Finally, the person finds an integer $d$ such that $d*e$ (mod $\varphi(n))$ is congruent to 1. 
+\subsection{Encryption}
+The receiver transmits n and e to the sender as public keys. The sender then encrypts his message $m$, which is in the form of a number, by computing $m^e$ (mod $n$). The sender passes this ciphertext, labeled $c$, to the receiver. 
+
+\subsection{Decryption}
+Since only the receiver has the private keys, only that person can decrypt $c$. The receiver decrypts message $c$ by computing $c^d$ (mod $n$). The receiver now has the message $m$ that the sender encrypted.
+
+
+\section{Why It Works}
+To show that the RSA algorithm works, we must show that $m \equiv m^{e^d} \pmod{n}$. We know that $m^{e^d}$ is the same as $m^{ed}$, and we chose $ed$ to be congruent to $1 \pmod{\varphi(n)}$. This means that $ed = 1+k\varphi(n)$, for some integer $k$. So $m^{e^d} \equiv m^{ed} \equiv m^{1+k\varphi(n)} \equiv m(m^{k\varphi(n)}) \equiv m((m^{\varphi(n))^k}) \equiv m(1^k) \equiv m \pmod{n}$. So $m \equiv m^{e^d} \pmod{n}$, which means that the algorithm works. ($m^{\varphi(n)}$ is congruent to $1 \pmod{n}$ by Euler's theorem.) 
+
+
+\section{Example One}
+
+To see how the RSA algorithm works, we work through two examples with different prime numbers. For the first example, we use $p$ = 23 and $q$ = 41. We compute $n=pq$ to be (23)(41)=943. We now find $\varphi(943) = (p-1)(q-1) = (22)*(40) = 880$. We now choose $e$, which must be relatively to 880, so we pick 7. We find a number $d$, such that $7d  \equiv 1 \pmod{880}$: 503, since 7*503 = 3521, which is congruent to 1 $\pmod{880}$. We have finished the key generation step, and now proceed to the encryption and decryption of a message. A person wants to encrypt the message $m$ = 35 and send it to the person holding the private keys. Since the person encrypting knows the public keys $n$ and $e$, he computes $c = m^e$ (mod n) = $35^7$ (mod 943). $35^7$ (mod 943) is congruent to 64339296875 (mod 943), which is congruent to 545. This person sends the ciphertext 545 to the person holding the private keys, where he begins the decryption process. The second person now takes 545 and computes $545^{503}$ (mod 943). After reducing many times, we obtain 35, the original message $m$ sent by the first person. 
+
+\section{Example Two}
+We choose primes $p$ = 5 and $q$ = 2. $n$ = 2*5 = 10. $\varphi(n)=(p-1)(q-1)=1*4 = 4$. We choose $e$ = 3, since 3 and 4 are relatively prime. We see that a choice of $d$=7 works, because 21 is 1 (mod 4). We choose to encrypt the string 'ABCD', taking the convention that A=1, B=2, etc. We first change the message into numeric form; while doing so, we must break the message into four seperate numbers. 'ABCD' becomes 1 2 3 4, and we encrypt each one separately. $1^3$ $\equiv$ 1 (mod 10), $2^3$ $\equiv$ 8 (mod 10), $3^3$ $\equiv$ 27 $\equiv$ 7 (mod 10), and $4^3$ $\equiv$ 64 $\equiv$ 4 (mod 10). Our encrypted message becomes 1 8 7 4. The person decrypting our message computes the following: $1^7$ $\equiv$ 1 (mod 10), $8^7$ $\equiv$ 2097152 $\equiv$ 2 (mod 10), $7^7$ $\equiv$ 823543 $\equiv$ 3 (mod 10), and $4^7$ $\equiv$ 16384 $\equiv$ 4 (mod 10). The decrypted message becomes 1 2 3 4, which he or she converts to 'ABCD' and receives the message successfully.
+
+
+
+\section{References}
+The following websites were used in creating this report:
+
+\url{http://www.wdvl.com/Style/Tools/Tutorial/public_vs_private.html}
+
+\url{http://en.wikipedia.org/wiki/RSA_%28algorithm%29}
+
+\url{http://en.wikipedia.org/wiki/Euler%27s_totient_function}
+
+\url{http://www.geometer.org/mathcircles/RSA.pdf}
+
+\end{document}

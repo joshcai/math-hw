@@ -1,0 +1,57 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage[all]{xy}
+\usetikzlibrary{positioning,chains,fit,shapes,calc}
+
+\begin{document}
+
+\title{Homework 7}
+\author{Josh Cai}
+
+\maketitle
+\section*{Section 10.4}
+
+\textbf{2c)} No, there is no edge from $d$ to $b$.
+
+\noindent\textbf{2d)} No, there is no edge from $b$ to $d$.
+\\\\\noindent\textbf{4} Is connected, is a path of length 9 with an additional vertex that is connected to it.
+\\\\\noindent\textbf{8} The connected components of a collaboration graph represent the group of people who, for any two people $a$ and $b$, there exists a path between them such that each edge in the path is between people who have collaborated.
+\\\\\noindent\textbf{14a)} The strongly connected components are: the vertices $a$, $b$, $e$ and the edges $(a,e)$, $(e,b)$, $(b,a)$; the vertex $d$; the vertex $c$.
+
+\noindent\textbf{14b)} The strongly connected components are: the vertices $e$, $d$, $c$ and the edges $(e,c)$, $(c,d)$, $(d,e)$; the vertex $b$; the vertex $a$; the vertex $f$.
+
+\noindent\textbf{14c)} The strongly connected components are: the vertices $a$, $b$, $c$, $d$, $i$, $h$, $g$, $f$ with all edges that are incident between any two vertices in that list in the original graph; the vertex $e$.
+\\\\\noindent\textbf{16} Since $u$ and $v$ are mututally reachable, there exists a directed path from $u$ to $v$ and from $v$ to $u$. Since $w$ and $v$ are mututally reachable, there exists a directed path from $w$ to $v$ and from $v$ to $w$. Thus, there exists a directed path from $u$ to $w$ (the path from $u$ to $v$ and then $v$ to $w$), and there exists a directed path from $w$ to $u$ (the path from $w$ to $v$ and then $v$ to $u$). Thus, $u$ and $w$ are mutually reachable.
+\\\\\noindent\textbf{22} Yes, they are isomorphic. The path $u_1, u_2, u_5, u_6, u_8, u_7, u_4, u_3$ in $G$ corresponds to the path $v_2, v_3, v_4, v_5, v_6, v_7, v_8, v_1$ in $H$. This mapping preserves adjancency between the vertices.
+\\\\\noindent\textbf{32} $c$ and $d$ are the cut vertices.
+\\\\\noindent\textbf{34 (31)} No cut edges.
+
+\noindent\textbf{34 (32)} $(c,d)$ is a cut edge.
+
+\noindent\textbf{34 (33)} $(a,b)$, $(b,c)$, $(c,d)$, $(c,e)$, $(e,i)$, $(i,h)$ are cut edges.
+\\\\\noindent\textbf{50b)} $\kappa (G) = 1$ (vertex $c$); $\lambda (G) = 3$ (edges $(a,b),(a,c),(a,h)$); $min_{v\in V}$ deg($v$) = 3 (degree of $a$); $\kappa (G) < \lambda (G) \le min_{v\in V}$ deg($v$).
+
+\noindent\textbf{50c)}$\kappa (G) = 3$ (vertices $a,d,g$); $\lambda (G) = 3$ (edges $(a,b),(a,c),(a,d)$); $min_{v\in V}$ deg($v$) = 3 (degree of $a$); $\kappa (G) \le \lambda (G) \le min_{v\in V}$ deg($v$).
+\\\\\noindent\textbf{56} Start with adjancency matrix. While $(v,w)$ is 0, multiply by adjancency matrix. When non-zero, this is the length of the shortest path from a vertex $v$ to vertex $w$. 
+\\\\\noindent\textbf{62} The matrix $[A]+[A]^2+...+[A]^6$ has 1's in all entries not on the diagonal for $G_1$, so it is connected. The matrix $[A]+[A]^2+...+[A]^5$ does not have a 1 in $(c,d)$ for $G_2$, so it cannot be connected. 
+
+\section*{Section 10.5}
+\\\\\noindent\textbf{2} Yes, a Euler circuit does exist: $(a,b),(b,d),(d,e),(e,b),(b,c),(c,f),(f,e),(e,h),\\(h,f),(f,i),(i,h),(h,g),(g,d),(d,a)$.
+\\\\\noindent\textbf{4} No Euler circuit, but an Euler path does exist: $(c,e),(e,a),(a,b),(b,c),(c,d),\\(d,b),(b,f),(f,a),(a,d),(d,e),(e,f)$.
+\\\\\noindent\textbf{6} No Euler circuit, but an Euler path does exist: $(b,a),(a,d),(d,e),(e,f),(f,d),\\(d,g),(g,i),(i,h),(h,a),(a,i),(i,d),(d,c),(c,i),(i,b),(b,c)$.
+\\\\\noindent\textbf{10} Yes, by drawing the graph for which land are vertices and bridges connecting them are edges, we see that each vertex has even degree, thus an Euler circuit must exist. 
+\\\\\noindent\textbf{14} Yes, the graph for which intersections are vertices and lines are edges has an Euler circuit since each vertex has an even degree.
+\\\\\noindent\textbf{20} Yes, an Euler circuit exists: $(a,d),(d,b),(b,d),(d,e),(e,b),(b,e),(e,c),(c,b),\\(b,a)$.
+\\\\\noindent\textbf{32} No, vertex $f$ has degree 1, and every element in a Hamilton circuit has at least degree 2. 
+\\\\\noindent\textbf{34} No, if a Hamilton circuit existed then it must contains the edges $(d,a)$ and $(a,b)$ since the degree of $a$ is 2. WLOG, we can start from the vertex $a$. If $(a,b)$ is the first edge, $(b,c)$ must be the second, since $c$ must be reached, and if it was reached by $h$ then it would visit $b$ twice, which is not allowed. Thus, $(c,h)$ must be third. With the same logic, $(h,g)$ must be next, which is followed by $(g,f)$. With the same logic, $(f,e)$ would be the next edge, followed by $(e,d)$. Since $d$ cannot be visited twice, and we know $(d,a)$ exists in the cycle, we finish the cycle with $(d,a)$ but we have not visited any of the interior points. 
+\\\\\noindent\textbf{36} Yes, the sequence of vertices (since it is a simple graph) for the Hamilton circuit is: $a,b,c,f,i,h,e,g,d,a$. 
+
+
+
+
+
+
+
+\end{document}

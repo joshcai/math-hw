@@ -1,0 +1,83 @@
+\documentclass{article}
+\usepackage{graphicx}
+
+\begin{document}
+
+\title{Homework 3}
+\author{Josh Cai}
+
+\maketitle
+
+
+\begin{enumerate}
+\item
+(a) \[f^{-1}(B_1)=\{a|f(a)\in B_1\}\]
+\[\Rightarrow f^{-1}(B_1)=\{a|f(a)\in B_0 \cup B_1 - B_0\}\] since we know $B_0 \subset B_1$. Thus,
+\[f^{-1}(B_1)=\{a|f(a)\in B_0\} \cup \{a|f(a)\in B_1 - B_0\}\]
+Therefore, $f^{-1}(B_0) \subset f^{-1}(B_1)$, since $f^{-1}(B_0)=\{a|f(a)\in B_0\}$.
+\\\\(b) \[f^{-1}(B_0 \cup B_1)=\{a|f(a)\in B_0 \cup B_1\}\]
+\[=\{a|f(a)\in B_0\}\cup \{a|f(a)\in B_1\}\]
+\[=f^{-1}(B_0) \cup f^{-1}(B_1).\]
+\\\\(c) Let arbitrary $x \in f^{-1}(B_0 \cap B_1)$. 
+\[f(x) \in B_0 \cap B_1\]
+\[\Rightarrow f(x) \in B_0,f(x) \in B_1\] 
+\[\Rightarrow x\in f^{-1}(B_0), x \in f^{-1}(B_1)\]
+\[\Rightarrow x \in f^{-1}(B_0) \cap f^{-1}(B_1).\] Since $x$ was arbitrary, $f^{-1}(B_0 \cap B_1) \subset f^{-1}(B_0) \cap f^{-1}(B_1)$.
+\\ Let arbitrary $x \in f^{-1}(B_0) \cap f^{-1}(B_1)$. 
+\[x \in f^{-1}(B_0),x \in f^{-1}(B_1)\]
+\[\Rightarrow f(x) \in B_0, f(x) \in B_1\]
+\[\Rightarrow f(x) \in B_0 \cap B_1\]
+\[\Rightarrow x \in f^{-1}(B_0 \cap B_1)\]
+Since $x$ was arbitrary, $f^{-1}(B_0) \cap f^{-1}(B_1) \subset f^{-1}(B_0 \cap B_1)$.\\
+Since they are subsets of each other, $f^{-1}(B_0 \cap B_1) = f^{-1}(B_0) \cap f^{-1}(B_1) $.
+\\\\(d)  Let arbitrary $x \in f^{-1}(B_0 - B_1)$. 
+\[f(x) \in B_0 - B_1\]
+\[\Rightarrow f(x) \in B_0,f(x) \not\in B_1\]
+\[\Rightarrow x\in f^{-1}(B_0), x \not\in f^{-1}(B_1)\]
+\[\Rightarrow x \in f^{-1}(B_0) - f^{-1}(B_1).\] Since $x$ was arbitrary, $f^{-1}(B_0 - B_1) \subset f^{-1}(B_0) - f^{-1}(B_1)$.
+\\ Let arbitrary $x \in f^{-1}(B_0) - f^{-1}(B_1)$.
+\[x \in f^{-1}(B_0),x \not\in f^{-1}(B_1)\]
+\[\Rightarrow f(x) \in B_0, f(x) \not\in B_1\]
+\[\Rightarrow f(x) \in B_0 - B_1\]
+\[\Rightarrow x \in f^{-1}(B_0 - B_1)\]
+Since $x$ was arbitrary, $f^{-1}(B_0) - f^{-1}(B_1) \subset f^{-1}(B_0 - B_1)$.\\
+Since they are subsets of each other, $f^{-1}(B_0 - B_1) = f^{-1}(B_0) - f^{-1}(B_1)$.
+\item
+(a) To prove that $g\circ f$ is injective, we show that \[g(f(x))=g(f(y)) \Rightarrow x=y.\] 
+Since $g$ is injective, \[g(f(x))=g(f(y)) \Rightarrow f(x)=f(y).\] 
+Since $f$ is injective, \[f(x)=f(y) \Rightarrow x=y.\] 
+Therefore, $g\circ f$ is injective.
+\\\\ (b) If $g \circ f$ is injective, $f$ must be injective, but $g$ does not have to be. If $f$ is injective, then $f(x) = f(y)$ implies $x = y$ and the composition function goes from $g(f(x)) = g(f(y))$ to $g(f(x)) = g(f(x))$, which is true regardless if $g$ is injective or not. If $f$ is not injective, then it would not be true that $g \circ f$ is injective (whichever case failed the test for injectivity of $f$ would fail the test for injectivity of $g \circ f$. 
+
+(c) To prove that $g\circ f$ is surjective, we show that $\forall c \in C$, $\exists a \in A$ such that $g(f(a)) = c$. Since $g$ is surjective, $\forall c \in C$, $\exists b \in B$ such that $g(b) = c$. Since $A$ is surjective, we can replace the $b$ with $f(a)$ since we know $\exists a \in A$ such that $f(a) = b$. Therefore,$\forall c \in C$, $\exists a \in A$ such that $g(f(a)) = c$, so $g\circ f$ is surjective.
+
+(d) If $g \circ f$ is surjective, $g$ must be surjective, but $f$ does not necessarily have to be surjective. If $g$ is not surjective, then $g\circ f$ could not be surjective (whichever $c \in C$ that made $g$ not surjective would also make $g\circ f$ not surjective). Since multiple values of $b \in B$ could map to the same value of $c \in C$, we see that $f$ does not have to be surjective ($f$ only needs to map to one of the multiple values of $b$ for $g \circ f$ to be surjective).
+
+
+(e) (i) The composition of injective functions is injective. 
+\\(ii) The composition of surjective functions is surjective. 
+\\(iii) If $g \circ f$ is injective, $f$ must be injective.
+\\(iv) If $g \circ f$ is surjective, $g$ must be surjective.
+\item
+\textit{Reflexive:} Let $a$ be an arbitrary element in $A_0 \subset A$. Since $C$ is an equivalence relation on the set $A$ and $a \in A$, $(a,a) \in C$. Since $a \in A_0$, $(a,a) \in A_0\times A_0$. Thus, $(a,a) \in C \cap A_0\times A_0$. Since $a$ was arbitrary, the reflexive property is satisfied in $C \cap A_0\times A_0$.
+\\\\ \textit{Symmetric:} Let $a,b$ be arbitrary elements in $A_0$. If $(a,b) \in C$, then $(b,a) \in C$ since $C$ is an equivalence relation on $A$. Since $a,b \in A_0$, $(a,b), (b,a) \in A_0\times A_0$ by definition of $A_0\times A_0$. Since $a,b$ were arbitrary, the symmetric property is satisfied in $C \cap A_0\times A_0$.
+\\\\ \textit{Transitive:} Let $a,b,c$ be arbitrary elements in $A_0$. If $(a,b) \in C$ and $(b,c) \in C$, then $(a,c) \in C$ since $C$ is an equivalence relation on $A$. Since $a,b,c \in A_0$, $(a,b), (b,c), (a,c) \in A_0\times A_0$ by definition of $A_0\times A_0$. Since $a,b,c$ were arbitrary, the transitive property is satisfied in $C \cap A_0\times A_0$.
+\\\\ Since $C \cap A_0 \times A_0$ is reflexive, symmetric, and transitive, $C \cap A_0 \times A_0$ is an equivalence relation. 
+
+
+
+\item
+If $a$ is not related to any $b$ in $R$, the relation is not necessarily reflexive but is still symmetric and transitive. For example, let $A = \{1,2,3\}$, and let $R = \{(2,2),(2,3),(3,2),(3,3)\}$. $R$ is symmetric and transitive but not reflexive.
+
+
+\item
+(a)\textit{Reflexive:} Since $f(a) = f(a)$, $(a,a) \in R$ for all $a \in A$. 
+\\\textit{Symmetric:} If for $a,b \in A$ $(a,b) \in R$, then $f(a)=f(b)$. Since it is clearly true that $f(b)=f(a)$, $(b,a)$ must be in $R$ as well.
+\\\textit{Transitive:} If for $a,b,c \in A$ $(a,b),(b,c) \in R$, then $f(a)=f(b)$ and $f(b)=f(c)$. So $f(a)=f(b)=f(c)$, and $(a,c)$ must exist in $R$.
+\\\\ Since $R$ is reflexive, symmetric, and transitive on $A$, $R$ is an equivalence relation. 
+\\\\(b) We assume that for all $a \in A$, $f(a)$ exists. The bijection between $A^*$ and $B$ is $f^{-1}(b) \rightarrow b$. Since $f$ is surjective, the preimage of $b$ is never empty, so there are equal numbers of equivalence classes and elements in $B$.
+
+
+\end{enumerate}
+
+\end{document}

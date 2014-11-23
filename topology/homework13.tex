@@ -1,0 +1,26 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+
+\begin{document}
+
+\title{Homework 13}
+\author{Josh Cai}
+
+\maketitle
+\begin{enumerate}
+\item
+There are no limit points of $A$. Suppose $x$ is a limit point in $A$. Since one point sets are open in $X$, the one point set $\{x\}$ is a neighborhood of $x$ that does not intersect $A$ at a point other than $x$.
+
+\item
+($\Rightarrow$) If $x \times y$ is a limit for the sequence $(x_n \times y_n)_{n\in \mathbb{N}^+}$, then every open neighborhood $U_x \times U_y$ contains all but finitely many elements $x_n \times y_n$. Take an arbitrary $U_x \times U_y$ and the finitely many elements $x_n \times y_n$ not contained within it. $U_x$ is open and $\pi_1(x_n \times y_n) = x_n$ give finitely many $x_n$, and since $U_x \times U_y$ is arbitrary, $(x_n)_{\mathbb{N}^+}$ has limit $x$ because every open set in $X$ is $\pi_1(X_1 \times Y_1)$ for some $X_1 \times Y_1$ (by definition of the basis of the product topology). The same argument applies for $(y_n)_{\mathbb{N}^+}$ having limit $y$.
+\\\\
+($\Leftarrow$) Since the basis of the product topology on $X \times Y$ is $U \times V$ where $U$ is an open subset of $X$ and $V$ is an open set of $Y$, we take arbitrary open neighborhoods $U_x$ and $U_y$ that contain all but finitely many $x_n$ and $y_n$ respectively (true by defintions of $(x_n)_{\mathbb{N}^+}$ has limit $x$ and $(y_n)_{\mathbb{N}^+}$ has limit $y$). Then the cartesian product of these finitely many $x_n$ and $y_n$ give finitely many $x_n \times y_n$ that are not in $U_x \times U_y$. Since $U_x$ and $U_y$ are arbitrary, $x \times y$ is a limit for the sequence $(x_n \times y_n)_{n\in \mathbb{N}^+}$. 
+
+\item
+Let $x_1, x_2 \in Y \subset X$. Then $\exists U_{x_1}, U_{x_2} \subset X$ such that $U_{x_1} \cap U_{x_2} = \emptyset$ by definition of $X$ is Hausdorff. Then $U_{x_1} \cap Y, U_{x_2} \cap Y$ are open neighborhoods in $\mathcal{T}_Y$ that contain $x_1, x_2$ respectively (since $x_1 \in U_{x_1} \wedge x_1 \in Y$, same for $x_2$). Since $U_{x_1} \cap U_{x_2} = \emptyset$, 
+\[(Y \cap U_{x_1}) \cap (Y \cap U_{x_2}) = Y \cap (U_{x_1} \cap U_{x_2}) = \emptyset\]. Since $x_1, x_2$ are arbitrary, $Y$ is Hausdorff. 
+
+
+\end{enumerate}
+\end{document}

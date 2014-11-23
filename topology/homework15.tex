@@ -1,0 +1,24 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+
+\begin{document}
+
+\title{Homework 15}
+\author{Josh Cai}
+
+\maketitle
+\begin{enumerate}
+\item
+($\Rightarrow$) Let $V$ be an arbitrary closed set of $Y$. Then $Y-V$ is a open set of $Y$. Then \[f^{-1}(Y-V) = f^{-1}(Y)-f^{-1}(V)= X-f^{-1}(V).\] Since $X-f^{-1}(V)$ is open by supposition, $X-(X-f^{-1}(V)) = f^{-1}(V)$ is closed in $X$. Since $V$ was an arbitrary closed set, for every closed set $V$ of $Y$, $f^{-1}(V)$ is closed in $X$.
+\\\\($\Leftarrow$) Let $V$ be an arbitrary open set of $Y$. Then $Y-V$ is a closed set of $Y$. Then \[f^{-1}(Y-V) = f^{-1}(Y)-f^{-1}(V)= X-f^{-1}(V).\] Since $X-f^{-1}(V)$ is closed by supposition, $X-(X-f^{-1}(V)) = f^{-1}(V)$ is open in $X$. Since $V$ was an arbitrary open set, for every open set $V$ of $Y$, $f^{-1}(V)$ is open in $X$.
+
+\item
+Functions that are have an infinite domain and an infinite image or finite domain and finite image are continuous. If an image is not infinite, but the domain is, there exists upper and lower bounds of the image, which give an interval that is closed under $Y$ but open under $X$. If the image is infinite, and the domain isn't, taking $(-\infty, \infty)$ would give an open set under $Y$ but not under $X$. If both are infinite, then closed sets are preserved under $f^{-1}$. If both are finite, every set is closed in $Y$ and $X$. 
+
+\item
+No, if $Y$ is the discrete topology, one point sets are open, so $\{f(x)\}$ would be an open neighborhood of $f(x)$ that does not intersect $f(A)$ at a point other than itself, so $f(x)$ would never exist in $f(A)'$.
+
+
+\end{enumerate}
+\end{document}

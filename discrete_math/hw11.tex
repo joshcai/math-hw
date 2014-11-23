@@ -1,0 +1,54 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage[all]{xy}
+\usetikzlibrary{positioning,chains,fit,shapes,calc}
+
+\begin{document}
+
+\title{Homework 11}
+\author{Josh Cai}
+
+\maketitle
+\section*{Section 8.1}
+
+\noindent\textbf{2a)} $a_n = n \times a_{n-1}$, because there are $n$ places to insert the $a_n$th digit into the existing permutation.
+
+\noindent\textbf{2b)} $a_n = n \times a_{n-1} = n \times a_{n-1} \times a_{n-2} =  n \times a_{n-1} \times a_{n-2} \times . . . \times 1 = n!$.
+\\\\\noindent\textbf{4)} The number of ways to pay a bill of $n$ pesos is $a_n = a_{n-1} + a_{n-2}+2a_{n-5}+2a_{n-10}+a_{n-20}+a_{n-50}+a_{n-100}$.
+\\\\\noindent\textbf{8a)} The number of bit strings of length $n$ with three consecutive zeros is $a_{n}=a_{n-1}+a_{n-2}+a_{n-3}+2^{n-3}$, since each ends in either 1 (number is $a_{n-1}$), 10 (number is $a_{n-2}$), 100 (number is $a_{n-3}$), or 000 (number is $2^{n-3}$).
+
+\\\noindent\textbf{8b)} $a_1 = a_2 = 0, a_3 = 1$
+
+\\\noindent\textbf{8c)} There are 47 different bit strings of length 7 with three consecutive zeros.
+\\\\\noindent\textbf{14a)} The number of ternary strings with two consecutive zeros is $a_n = 2a_{n-1}+2a_{n-2}+3^{n-2}$.
+
+\\\noindent\textbf{14b)} $a_1 = 0, a_2 = 1$
+
+\\\noindent\textbf{14c)} There are 281 different ternary strings of length 6 with two consecutive zeros.
+\\\\\noindent\textbf{30a)} 
+
+\\\noindent\textbf{30b)} $C_2 = C_0C_1+C_1C_0 = 1+1 = 2$. $C_3 = C_0C_2+C_1C_1+C_2C_0 = 2+1+2 = 5$. $C_4 = C_0C_3+C_1C_2+C_2C_1+C_3C_0 = 5+2+2+5 = 14$.
+
+\\\noindent\textbf{30c)} $C_4 = \frac{1}{n+1} \binom{8}{4} = \frac{1}{5} \times \frac{8!}{4!4!} = 14$.
+
+\section*{Section 8.2}
+\noindent\textbf{2a)} Is a linear homogeneous recurrence relation with constant coefficients, degree 2.
+
+\noindent\textbf{2b)} Is not homogeneous. 
+
+\noindent\textbf{2c)} Is not linear.
+
+\noindent\textbf{2d)} Is a linear homogeneous recurrence relation with constant coefficients, degree 3.
+\\\\\noindent\textbf{4b)} Is not homogeneous. 
+
+\noindent\textbf{4d)} Is not linear.
+
+\noindent\textbf{4f)} Is a linear homogeneous recurrence relation with constant coefficients, degree 3.
+\\\\\noindent\textbf{6)} Recurrence relation is $a_n = 2a_{n-1}+a_{n-2}$. Characteristic equation is $r^2 -2r-1$.
+
+
+
+
+\end{document}

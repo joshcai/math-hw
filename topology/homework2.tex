@@ -1,0 +1,56 @@
+\documentclass{article}
+\usepackage{graphicx}
+
+\begin{document}
+
+\title{Homework 2}
+\author{Josh Cai}
+
+\maketitle
+
+
+\begin{enumerate}
+\item 
+(a) $\exists x (x\in A \wedge x\in B \wedge x\in C)$ 
+\\(b) $\forall s \in S(s\not\subset s)$
+\\(c) $\exists x,y \in X(x \neq y)$
+\\(d) $\{x,y\} \subset X \wedge X \subset \{x,y\} \wedge x \subset y$
+
+\item
+(3) If for all $a$, $A \wedge B$ is true, $A$ must be true and $B$ must be true. If for all $x$, $A$ is true and $B$ is true, then $\forall x(A)\wedge \forall x(B)$. Similarily, if for all $x$, $A$ is true and $B$ is true, then $A \wedge B$ is true, thus $\forall x(A \wedge B)$. 
+\\(4) If there exists an $x$ such that $A \vee B$ is true, it could mean that $A$ is true, $B$ is true, or both. So this implies $\exists x(A) \vee \exists x(B)$. Similarily, if there exists $x$ such that $A$ is true or an $x$ such that $B$ is true, then for that $x$, $A \vee B$ is true. 
+\\\\ $\exists x (A\wedge B) \Leftrightarrow \exists x(A) \wedge \exists x(B)$ is not always true because there may exist an $x$ for which $A$ is true and another $x$ for which $B$ is true, but they need not be the same $x$. In that case, the left side would be false, and the right side true.
+\\ $\forall x (A\vee B) \Leftrightarrow \forall x(A) \vee \forall x(B)$ is not always true because if one $x$ is true for $A$ and false for $B$ and another $x$ is false for $A$ and true for $B$, then the left side would be true, but the right side would be false.
+
+
+
+\item 
+(b) The left hand side can be rewritten $$\Rightarrow \forall x \in A(x\in B) \vee \forall x \in A(x \in C)$$ Since $B \subset B \cup C$ and $C \subset B\cup C$, if the left hand side is true, the right hand side must be true. However, the right side does not imply the left side. Take for example the sets $B = \{1,2\}$, $C = \{2,3\}$, and $A=\{1,3\}$. We see that $A\subset B \cup C$ but $A \not\subset B$ and $A\not\subset C$.
+\\\\(c) The right hand side can be rewritten $$\forall x \in A(x\in B\cap C)$$ $$\Rightarrow \forall x \in A(x \in B \wedge x \in C)$$ 
+$$\Rightarrow \forall x \in A(x\in B) \wedge \forall x \in A(x \in C)$$ $$ \Rightarrow A \subset B \wedge A \subset C$$
+They are equivalent since this is what the left hand side said. 
+\\\\(e) This becomes true when replacing = with $\subset$. The left hand side can be rewritten: $$\forall x(x\in A) \wedge \forall x(x \not\in A - B)$$
+$$ = \forall x(x\in A) \wedge \forall x(\neg(x\in A \wedge x\not\in B))$$
+$$ = \forall x(x\in A) \wedge \forall x(x\not\in A \vee x\in B)$$
+$$ = (\forall x(x\in A) \wedge \forall x(x\not\in A)) \vee (\forall x(x\in A) \wedge \forall x(x\in B))$$
+$$ = \forall x(x\in A) \wedge \forall x(x\in B)$$
+$$ = \forall x(x\in A \wedge x\in B)$$
+$$ = A \cap B.$$
+$A \cap B$ is a subset of $B$, but B is not always a subset of $A \cap B$.
+
+\item
+$D = A \cap (B \cup C)$
+\\ $E = (A\cap B) \cup C$
+\\ $F = A - (A\cap B - A \cap B \cap C)$
+
+\item
+Suppose the elements in $A$ are $a$ and $b$. $\mathcal{P}(A)=\{\emptyset , \{a\}, \{b\}, \{a,b\}\}$ which has 4 elements. $\mathcal{P}(A)$ has 2 elements if A has 1, 8 if A has 3, and 1 if A has 0. $\mathcal{P}(A)$ is called the power set of A because the number of elements in $\mathcal{P}(A)$ is $2^{|A|}$.
+
+\item
+Suppose $A = \cup C$ for some $C \subset B$. This means that $$A = \{a | \exists c \in C(a\in c)\}$$ This definition shows that for every $a \in A$, there exists $c \in C$ such that $a\in c$. We show $c \subset A$ for every $a \in A$. Since by the definition of $A$, we know everything in $c \in C$ must be in $A$. Therefore, $c$ must be a subset of A. 
+
+
+
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,21 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+
+\begin{document}
+
+\title{Homework 9}
+\author{Josh Cai}
+
+\maketitle
+
+
+\begin{enumerate}
+\item
+a) Yes, $[0,1] \times [0,1]$ does have the least upper bound property under the dictionary order. Consider a finite subset of ordered pairs $\{ a_0\times b_0, a_1 \times b_1, ... a_i \times b_i \}$. Then the least upper bound is simply the greatest element of the subset under the dictionary order. Consider an infinite subset of the form of a subinterval $\times$ a subinterval. Since all intervals under $\mathbb{R}$ satisfy the least upper bound property, taking the respective least upper bound properties of the subintervals gives the least upper bound of the subset.
+\\\\b) Yes, $[0,1) \times [0,1]$ does have the least upper bound property under the dictionary order. Consider a finite subset of ordered pairs $\{ a_0\times b_0, a_1 \times b_1, ... a_i \times b_i \}$. Then the least upper bound is simply the greatest element of the subset under the dictionary order. Consider an infinite subset of the form of a subinterval $\times$ a subinterval. Since all intervals under $\mathbb{R}$ satisfy the least upper bound property, taking the respective least upper bound properties of the subintervals gives the least upper bound of the subset. It is noted that if the first interval is of the form $[a,1)$ or $(a,1)$, then the subset is not bounded above and the least upper bound property is still satisfied.
+\\\\c) No, $[0,1] \times [0,1)$ does not have the least upper bound property under the dictionary order. Consider the subset $\{0\}\times [0,1)$. This is clearly bounded above by $1\times 0$. If there is to be a least upper bound $a \times b$, $a$ must be greater than 0, since if $a=0$, then there is no largest element in $[0,1)$. Then suppose we have a least upper bound $a \times b$ such that $a>0$. Then $a/2 \times b$ is also an upper bound, since $a/2 > 0$. Therefore, we have a contradiction and have shown that the subset $\{0\}\times [0,1)$ does not satisfy the least upper bound property.
+
+\end{enumerate}
+
+\end{document}

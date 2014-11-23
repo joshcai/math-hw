@@ -1,0 +1,22 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+
+\begin{document}
+
+\title{Homework 16}
+\author{Josh Cai}
+
+\maketitle
+\begin{enumerate}
+\item
+Since $U$ and $V$ are in the product topology, both satisfy that for all but finitely many $\alpha$, $U_{\alpha} = X_{\alpha}$. Thus, for any point $u \in U$, there exists a point $v \in V$ such that for all but finitely many coordinates $\alpha$, $[u]_{\alpha} = [v]_{\alpha}$ because only a finite number of $U_{\alpha}$ differ from $V_{\alpha}$.
+
+\item
+$x$ is a limit for $x_n$ if every open neighborhood $U_x$ of $x$ contains all but finitely many $x_i$. Under the product topology, every open set satisfies that for all but finitely many $\alpha, U_{\alpha} = X_{\alpha}$. Thus for all $U_x$ of $x$, the only points of the sequence it could not contain are the ones in which $U_{\alpha} \neq X_{\alpha}$, which is a finite number, thus every $U_x$ of $x$ contains all but finitely many $x_i$ and $x$ is a limit under the product topology. $x$ is not a limit for $x_n$ under the box topology. Suppose you had the open neighborhood $(-1,\frac{1}{1})\times (-1,\frac{1}{2^2}) \times (-1,\frac{1}{3^3})... \times (-1,\frac{1}{n^n})...$. This neighborhood does not contain any of the points in the sequence, and thus $x$ can not be a limit under the box topology.
+\addtocounter{enumi}{1}
+\item
+The closure of $Y$ is $Y$ itself. Points not in $Y$ that are in the closure of $Y$ would be limit points and would have an infinite number of nonzero terms. For any such point, taking neighborhoods of the nonzero terms that do not intersect zero gives an open neighborhood of the point that does not intersect $Y$ at a point other than itself. Thus, the closure of $Y$ is $Y \cup Y' = Y \cup \emptyset = Y$.
+
+\end{enumerate}
+\end{document}

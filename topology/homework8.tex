@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+
+\begin{document}
+
+\title{Homework 8}
+\author{Josh Cai}
+
+\maketitle
+\begin{enumerate}
+\item
+$R$ is a total order on $\mathbb{R} \times \mathbb{R}$ iff every two elements $a,b \in \mathbb{R}$, then either $(x,y)\in R$ or $(y,x)\in R$. For every two elements $a,b$ by trichotomy law $a<b$, $a=b$, or $a>b$.
+\\\\ If $a<b$, $a^2<b^2$ if $|a|<|b|$ so $(a,b) \in R$ or $b^2<a^2$ if $|b|<|a|$ so $(b,a) \in R$. In either case, $a$ is comparable to $b$.
+\\\\ If $a>b$, $a^2>b^2$ if $|a|>|b|$ so $(b,a) \in R$ or $b^2>a^2$ if $|b|>|a|$ so $(a,b) \in R$. In either case, $a$ is comparable to $b$.
+\\\\ If $a=b$, then $a^2=b^2$ and $a \le b$ by assumption. Then $(a,b) \in R$, so $a$ is comparable to $b$.
+\\\\Since we have shown an arbitrary $a$ and $b$ to be comparable no matter the condition, $R$ is a total order on $\mathbb{R}$.
+\addtocounter{enumi}{2}
+\\\item (a) Is open, since $(0,1) \times (0,1)$ is a union of basis elements $(a\times 0, a\times 1)$, $0<a<1,$ that are open on $\mathbb{R}\times\mathbb{R}$.
+\\(b) Is not open, since any open set containing $0 \times b$ where $0<b<1$ must contain some $a \times b$ with $a<0$.
+\\(c) Is not open, since any open set containing $a \times 1$ where $0<a<1$ must contain some $a \times b$ with $b>1$.
+\\(d) Is not open, since any open set containing $0 \times b$ where $0\le b\le 1$ must contain some $a \times b$ with $a<0$.
+\\(e) Is open, $\emptyset \times [0,1]$ is equal to $\emptyset$, which is open in every topology.
+\\\item 
+Given a basis element $B_{x_1,x_2}^d$ of the standard topology on $\mathbb{R}^2$ and a point $x \times y$ of $B_{x_1,x_2}^d$, we take the basis element $(x\times y-\epsilon, x\times y+\epsilon)$ from the dictionary order topology, where $\epsilon$ is infinitely small. $(x\times y-\epsilon, x\times y+\epsilon)$ contains $x \times y$ and lies within $B_{x_1,x_2}^d$. However, no basis element $B_{x_1,x_2}^d$ lies within $(x\times y-\epsilon, x\times y+\epsilon)$ and contains $x$ because the interval $(x\times y-\epsilon, x\times y+\epsilon)$ has no width. This shows the dictionary order topology on $\mathbb{R}\times\mathbb{R}$ is strictly finer than the standard topology on $\mathbb{R}^2$.
+\\\\Given a basis element $(a\times b, c\times d)$ of the dictionary order and a point $x \times y$ of $(a\times b, c\times d)$, we take the basis element $\{x \times y\}$ of the discrete topology. By definition, this is within $(a\times b, c\times d)$ and contains $x \times y$. However, no basis element $(a\times b, c\times d)$ lies within $x \times y$ since it has no length or width. (An open interval with no length or width would be the empty set.) Therefore, the discrete topology is strictly finer than the dictionary order topology on $\mathbb{R}\times\mathbb{R}$.
+
+\end{enumerate}
+\end{document}

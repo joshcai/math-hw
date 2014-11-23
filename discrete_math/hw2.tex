@@ -1,0 +1,90 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage[all]{xy}
+\usetikzlibrary{positioning,chains,fit,shapes,calc}
+
+\begin{document}
+
+\title{Homework 2}
+\author{Josh Cai}
+
+\maketitle
+\section*{Section 9.1}
+\textbf{4b)} R is symmetric and transitive.
+\\
+\textbf{4c)} R is symmetric and transitive.
+\\\\
+\textbf{6a)} R is symmetric and transitive.
+\\
+\textbf{6b)} R is symmetric and transitive.
+\\
+\textbf{6d)} R is none of the properties.
+\\
+\textbf{6h)} R is symmetric.
+\\\\
+\textbf{30a)} R_{1} \cup R_{2} = \{(1,2),(2,3),(3,4),(1,1),(2,1),(2,2),(3,1),(3,2),(3,3)\}
+\\
+\textbf{30b)} R_{1} \cap R_{2} = \{(1,2),(2,3),(3,4)\}$
+\\
+\textbf{30c)} R_{1} - R_{2} = \emptyset
+\\\\
+\textbf{32)} R_{1} \circ R_{2} = \{(1,1),(1,2),(2,1),(2,2)\}
+\\\\
+\textbf{34a)} R_{1} \cup R_{3} = \{(a,b) \in \textbf{R}^{2}|a\neq b\}
+\\
+\textbf{34c)} R_{2} \cap R_{4} = \{(a,b) \in \textbf{R}^{2}|a=b\}
+\\
+\textbf{34e)} R_{1} - R_{2} = \emptyset
+\\\\
+\textbf{36b)} R_{1} \circ R_{2} = \{(a,b) \in \textbf{R}^{2}|a>b\}
+\\\\
+\textbf{56a)} R^{2} = \{(1,1),(1,2),(1,3),(1,4),(1,5),(2,2),(2,4),(2,5),(3,1),(3,2),(3,4),(3,5),(4,1),\\(4,2),(4,3),(4,4),(5,1),(5,2),(5,3),(5,4),(5,5)\}
+\\\\
+ \begin{bmatrix}
+  1 & 1 & 1 & 1 & 1 \\
+  0 & 1 & 0 & 1 & 1 \\
+  1 & 1 & 0 & 1 & 1 \\
+  1 & 1 & 1 & 1 & 0 \\
+  1 & 1 & 1 & 1 & 1 
+ \end{bmatrix}
+\\\\\\\\\\\\
+\textbf{56b)} R^{3} = \{(1,1),(1,2),(1,3),(1,4),(1,5),(2,1),(2,2), (2,3)(2,4),(2,5),(3,1),(3,2),(3,3),\\(3,4),(3,5),(4,1),(4,2),(4,3),(4,4),(4,5),(5,1),(5,2),(5,3),(5,4),(5,5)\}
+\\\\
+ \begin{bmatrix}
+  1 & 1 & 1 & 1 & 1 \\
+  1 & 1 & 1 & 1 & 1 \\
+  1 & 1 & 1 & 1 & 1 \\
+  1 & 1 & 1 & 1 & 1 \\
+  1 & 1 & 1 & 1 & 1 
+ \end{bmatrix}
+\\
+\section*{Section 9.5}
+\textbf{2b)} This relation is an equivalence relation. \\ \textit{Reflexive:} A person has the same parents as himself/herself. \\ \textit{Symmetric:} If two people have the same parents, it doesn't matter what order they are listed. \\ \textit{Transitive:} If person A is a sibling of person B and person B is a sibling of person C, A and C are also siblings.
+\\\\
+\textbf{2d)} This relation isn't an equivalence relation. \\ \textit{Reflexive:} A person has met himself. \\ \textit{Symmetric:} If person A has met person B, then person B met person A as well. \\ \textit{Transitive:} However, if person A knows person B and person B knows person C, person A doesn't necessarily know person C.
+\\\\
+\textbf{8)} \textit{Reflexive:} Each set has the same number of elements as itself. \\ \textit{Symmetric:} If set A has the same cardinality as set B, then there exists a bijection between the two. Since a bijection exists between the two, set B has the same number of elements as set A. \\ \textit{Transitive:} If set A has the same cardinality as set B and set B has the same cardinality as set C, there exists a bijection between sets A and B and another bijection between sets B and C. Since a one-to-one mapping from A to B and B to C exists, there is a one-to-one mapping from A to C. \\\\ \{0,1,2\} is in the equivalence class of all sets with 3 real numbers. \\ \textbf{Z} is in the equivalence class of all countable sets.
+\\\\
+\textbf{12)} \textit{Reflexive:} Each bit string is the same as it itself, so it must have equivalent bits after the first three. \\ \textit{Symmetric:} If (x,y), then x and y agree on every bit except possibly not the first three bits. Since this is true, (y,x) must also be true. \\ \textit{Transitive:} If (x,y) and (y,z) the bit strings x, y, and z all agree on every bit except possibly not the first three bits. Since this is true, (x,z) must also be true.
+\\\\
+\textbf{20)} \textit{Reflexive:} A person has the same set of links as himself/herself when they browse. \\ \textit{Symmetric:} If (x,y), then person x has the same set of webpages followed as person y. Since it is the same set of links, (y,x) must also be true. \\ \textit{Transitive:} If (x,y) and (y,z), then x and y share the same set of webpages, and y and z share the same set of webpages. Since these sets are equal, (x,z) must be true.
+\\\\
+\textbf{22)} Yes, it is an equivalence relation. It is reflexive because all the vertices have loops. It is symmetric because each edge that is not a loop has a corresponding edge directed the opposite way. It is transitive because each partition only holds two elements.
+\\\\
+\textbf{24a)} No, it is not an equivalence relation. It is reflexive because of the main diagonal, but it is not symmetric because (1,2) is in the relation, but (2,1) is not. It is not transitive because (2,3) and (3,1) are in the relation but (2,1) is not.
+\\\\
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

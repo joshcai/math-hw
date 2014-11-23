@@ -1,0 +1,23 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+
+\begin{document}
+
+\title{Homework 12}
+\author{Josh Cai}
+
+\maketitle
+\begin{enumerate}
+\item
+We know that $X \times Y - A \times B = ((X-A) \times Y) \cup (X\times (Y-B))$. Since $A$ is closed, $X-A$ is open ($X-(X-A) = A$), and $Y$ is open in $Y$ by definition of topology. Thus, $(X-A) \times Y$ is open in $X \times Y$. Since $B$ is closed, $Y-B$ is open ($Y-(Y-B) = B$), and $X$ is open in $X$ by definition of topology. Thus, $X \times (Y-B)$ is open in $X \times Y$. Since the union of two open sets is open, $((X-A) \times Y) \cup (X\times (Y-B)) = X \times Y - A \times B$ is open. Thus, $A\times B$ is closed, since $A\times B = X\times Y-(X \times Y - A \times B)$.
+
+\addtocounter{enumi}{1}
+\item 
+a) $\bar{A} = A \cup A'$ and $\bar{B} = B \cup B'$. Since $A \subset B$, all limit points of $A$ must also be limit points of $B$, $A' \subset B'$. Then it follows that $A \cup A' \subset B \cup B'$ from $A \subset B$ and $A' \subset B'$. Thus, $\bar{A} \subset \bar{B}$.
+\\\\b) Since $\bar{A}\cup\bar{B} = A\cup B \cup A' \cup B'$, we know that $A\cup B \subset \bar{A}\cup\bar{B}$. $\bar{A}\cup\bar{B}$ is closed, since the closure of a set is always closed and a finite union of closed sets is closed. Then, from part (a), $\overline{A\cup B} \subset \bar{A}\cup\bar{B}$. $A \subset A\cup B$ and $B \subset A\cup B$, so $\bar{A} \subset \overline{A\cup B}$ and $\bar{B} \subset \overline{A\cup B}$. Thus $\bar{A}\cup\bar{B} \subset \overline{A\cup B}$. So, $\bar{A}\cup\bar{B} = \overline{A\cup B}$.
+\\\\c) Since $A_{\alpha} \subset \bigcup A_{\alpha}$, we know from part (a) that $\overline{A_{\alpha}} \subset \overline{\bigcup A_{\alpha}}$. Thus, $\bigcup\overline{A_{\alpha}} \subset \overline{\bigcup A_{\alpha}}$. Equality fails if $A_n = 1-\frac{1}{n}$ for $n \in \mathbb{N}$, because $\overline{\bigcup A_n}$ contains the element 1, but $\bigcup\overline{A_n}$ does not.
+
+
+\end{enumerate}
+\end{document}

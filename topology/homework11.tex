@@ -1,0 +1,30 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+
+
+\begin{document}
+
+\title{Homework 11}
+\author{Josh Cai}
+
+\maketitle
+
+
+\begin{enumerate}
+\item
+a) $(\frac{1}{2},1)$ is open in all three topologies. It is open in $\mathbb{R}$ since it is a basis element in the form of $(a,b)$ where $a,b\in \mathbb{R}$. It is open in $Y$ with the subspace topology since $(\frac{1}{2},1) \cap Y$ = $(\frac{1}{2},1)$ and $(\frac{1}{2},1)$ is open in $\mathbb{R}$. It is open in Y with the order topology since it is a basis element in the form of $(a,b)$ where $a,b \in Y$.
+\\\\b) $[\frac{1}{2},1)$ is not open in any of the three topologies. It is not open in $\mathbb{R}$ since it is not the arbitrary union or finite intersection of open sets $(a,b)$ in $\mathbb{R}$. It is not open in $Y$ with the subspace topology since any open set intersected with $Y$ containing $\frac{1}{2}$ would contain elements less than $\frac{1}{2}$. It is not open in $Y$ since it is not of the form of $(a,b)$, $(a,1]$, or $[0,b)$ with $a,b \in Y$. 
+\\\\c) $(\frac{1}{2},1]$ is open in the second and third topologies. It is not open in $\mathbb{R}$ since it is not the arbitrary union or finite intersection of open sets $(a,b)$ in $\mathbb{R}$. It is open in $Y$ with the subspace topology since $(\frac{1}{2},2) \cap Y$ = $(\frac{1}{2},1]$ and $(\frac{1}{2},2)$ is open in $\mathbb{R}$. It is open in $Y$ since it is of the form of $(a,1]$, since 1 is the greatest element of $Y$. 
+\\\\d) $[\frac{1}{2},1]$ is not open in any of the three topologies. It is not open in $\mathbb{R}$ since it is not the arbitrary union or finite intersection of open sets $(a,b)$ in $\mathbb{R}$. It is not open in $Y$ with the subspace topology since any open set intersected with $Y$ containing $\frac{1}{2}$ would contain elements less than $\frac{1}{2}$. It is not open in $Y$ since it is not of the form of $(a,b)$, $(a,1]$, or $[0,b)$ with $a,b \in Y$. 
+
+\item
+If $A \times B \in \mathcal{T}_{X \times Y}$, then $A$ is a union of open sets in $X$ and is open, and $B$ is a union of open sets in $Y$ and is open. (If they were not unions of open sets in their respective sets, they would not be the union of any subset of basis elements, and $A \times B$ would not be open.) Clearly, the projection $\pi_1$ maps to the open set $A$ in $X$, and the projection $\pi_2$ maps to the open set $B$ in $Y$.
+
+\item
+Given a basis element $(a \times b,c\times d)$ of the dictionary order topology and a point $x\times y$ of $(a \times b,c\times d)$, we take the basis element $\{x\}\times (c\times d)$ of the subspace topology since it contains $x \times y$ and lies within $(a \times b,c\times d)$. (The other cases of basis elements in the dictionary order topology $[0\times 0, c\times d)$ and $(a\times b, 1\times 1]$ are similar.) This shows that the subspace topology is finer than the dictionary order topology on $[0,1] \times [0,1]$. 
+\\Given a basis element $\{\frac{1}{2}\} \times (c, 1]$ of the subspace topology and a point $x\times y$ of $\{\frac{1}{2}\} \times (c, 1]$, there is no basis element of the dictionary order topology that is contained within $\{\frac{1}{2}\} \times (c, 1]$ and that contains $x \times y$. This is because for an open set (in the dictionary order) to contain $\frac{1}{2} \times 1$, there must be elements of the form $a \times b$ where $a>\frac{1}{2}$. Thus, the subspace topology is strictly finer than the dictionary order topology on $[0,1] \times [0,1]$. 
+
+\end{enumerate}
+
+\end{document}
